@@ -1,0 +1,201 @@
+.Skills {
+    position: relative;
+    padding: 20px;
+
+    .about {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+
+            h1 {
+                font-size: 40px;
+                font-weight: 100;
+            }
+        }
+
+        .about1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 20px;
+                box-shadow: 0 8px 16px rgba(100, 7, 240, 0.2), 0 12px 24px rgba(243, 130, 8, 0.2); /* Enhanced shadow */
+                transition: box-shadow 0.3s ease-in-out;
+
+            }
+            img:hover {
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 16px 32px rgba(0, 0, 0, 0.3);
+            }
+
+            p {
+                font-family: "DM Sans", sans-serif;
+                font-weight: 300;
+                font-size: 18px;
+                width: 90%;
+                text-align: center;
+                line-height: 1.6;
+                color: rgb(227, 224, 224);
+
+                .highlight {
+                    font-weight: bold;
+                    padding: 0.2em 0.4em;
+                    border-radius: 4px; 
+                }
+            }
+        }
+    }
+
+    .progress {
+        position: relative;
+        margin-top: 40px;
+        text-align: center;
+        color: orange;
+        font-size: 30px; // reduced for better responsiveness
+
+        .progressBar {
+            height: 10px;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        .skillsGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); // adjusted column size for smaller screens
+            gap: 50px; // reduced gap for better layout on smaller screens
+            justify-items: center;
+            align-items: center;
+            margin-top: 20px;
+
+            .skillItem {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #333;
+                transition: transform 0.3s ease, color 0.3s ease;
+
+                svg {
+                    font-size: 3rem; // reduced size for better responsiveness
+                    transition: color 0.3s ease;
+                    color: #ccc; 
+                    filter: drop-shadow(0 8px 16px rgba(100, 7, 240, 0.2)) 
+                    drop-shadow(0 12px 24px rgba(243, 130, 8, 0.2));
+                }
+
+                p {
+                    margin-top: 10px;
+                    font-size: 16px; // reduced size for better responsiveness
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    color: lightgray;
+                }
+                &:hover svg {
+                    color: #f0a500;
+                    transform: rotate(10deg);
+                    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); 
+                }
+            }
+
+            .skillItem:nth-of-type(1):hover svg { color: #61dafb; } /* React */
+            .skillItem:nth-of-type(2):hover svg { color: #68A063; } /* Node.js */
+            .skillItem:nth-of-type(3):hover svg { color: #4DB33D; } /* MongoDB */
+            .skillItem:nth-of-type(4):hover svg { color: #E34F26; } /* HTML5 */
+            .skillItem:nth-of-type(5):hover svg { color: #1572B6; } /* CSS3 */
+            .skillItem:nth-of-type(6):hover svg { color: #F7DF1E; } /* JavaScript */
+            .skillItem:nth-of-type(7):hover svg { color: #F34F29; } /* Git */
+            .skillItem:nth-of-type(8):hover svg { color: #563D7C; } /* Bootstrap */
+            .skillItem:nth-of-type(9):hover svg { color: #38B2AC; } /* Tailwind CSS */
+            .skillItem:nth-of-type(10):hover svg { color: #000000; } /* Express */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .about {
+            .title h1 {
+                font-size: 30px; // further reduced for tablet screens
+            }
+
+            .about1 {
+                img {
+                    width: 120px; // further reduced for tablet screens
+                    height: 120px;
+                }
+
+                p {
+                    font-size: 16px; // further reduced for tablet screens
+                }
+            }
+        }
+
+        .progress {
+            font-size: 24px; // further reduced for tablet screens
+
+            .skillsGrid {
+                grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); // adjusted for tablet screens
+                gap: 15px; // adjusted for tablet screens
+
+                .skillItem {
+                    svg {
+                        font-size: 2.5rem; // adjusted for tablet screens
+                    }
+
+                    p {
+                        font-size: 14px; // adjusted for tablet screens
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about {
+            .title h1 {
+                font-size: 24px; // further reduced for mobile screens
+            }
+
+            .about1 {
+                img {
+                    width: 100px; // further reduced for mobile screens
+                    height: 100px;
+                }
+
+                p {
+                    font-size: 14px; // further reduced for mobile screens
+                }
+            }
+        }
+
+        .progress {
+            font-size: 20px; // further reduced for mobile screens
+
+            .skillsGrid {
+                grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); // adjusted for mobile screens
+                gap: 10px; // adjusted for mobile screens
+
+                .skillItem {
+                    svg {
+                        font-size: 1.8rem; // adjusted for mobile screens
+                    }
+
+                    p {
+                        font-size: 10px; // adjusted for mobile screens
+                    }
+                }
+            }
+        }
+    }
+}
