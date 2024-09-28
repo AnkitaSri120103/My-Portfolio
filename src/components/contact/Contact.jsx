@@ -62,10 +62,10 @@ const Contact = () => {
                     <span>Kushinagar, Uttar Pradhesh, India</span>
                 </motion.div>
 
-                <motion.div className="item" variants={variants}>
+{/*                 <motion.div className="item" variants={variants}>
                     <h2>Phone</h2>
                     <span>7388976981</span>
-                </motion.div>
+                </motion.div> */}
             </motion.div>
             <div className="formContainer">
             <motion.div className="phoneSvg" initial={{ opacity: 1 }} whileInView={{ opacity: 0 }} transition={{ delay: 3, duration: 1 }}>
